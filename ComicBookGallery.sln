@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.21
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comic-book-gallery", "comic-book-gallery\comic-book-gallery.csproj", "{B97E4A09-E4C3-4397-991D-0AF7CA915604}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComicBookGallery", "comic-book-gallery\ComicBookGallery.csproj", "{B97E4A09-E4C3-4397-991D-0AF7CA915604}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

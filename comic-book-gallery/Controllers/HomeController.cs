@@ -5,15 +5,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using comic_book_gallery.Models;
+using ComicBookGallery.Models;
 
-namespace comic_book_gallery.Controllers
+namespace ComicBookGallery.Controllers
 {
-    public class ComicBooksController : Controller
+    public class HomeController : Controller
     {
-        private readonly ILogger<ComicBooksController> _logger;
+        private readonly ILogger<HomeController> _logger;
 
-        public ComicBooksController(ILogger<ComicBooksController> logger)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
@@ -32,6 +32,15 @@ namespace comic_book_gallery.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public ActionResult Detail()
+        {
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
+            {
+                return new RedirectResult("/");
+            }
+            return Content("I have written the first sentence!...");                   
         }
     }
 }
