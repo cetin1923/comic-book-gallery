@@ -36,11 +36,7 @@ namespace ComicBookGallery.Controllers
 
         public ActionResult Detail()
         {
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Tuesday)
-            {
-                return new RedirectResult("/");
-            }
-            return Content("I have written the first sentence!...");                   
+            return View();
         }
     }
 }
