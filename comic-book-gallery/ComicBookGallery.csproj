@@ -8,10 +8,4 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Views\ComicBooks\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\ComicBooks\" />
-  </ItemGroup>
 </Project>
