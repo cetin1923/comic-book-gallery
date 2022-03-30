@@ -8,6 +8,18 @@ namespace comic_book_gallery.Models
         public int IssueNumber{ get; set; }
         public string DescriptionHtml { get; set; }
         public Artist[] Artists { get; set; }
-        public bool Favourite { get; set; }      
+        public bool Favourite { get; set; }
+
+        public string DisplayText
+        {
+            get { return SeriesTitle + " #" + IssueNumber; }
+        }
+
+        // series-title-issuenumber.jpg
+
+        public string CoverImage
+        {
+            get { return SeriesTitle.Replace(" ", "-").ToLower() +"-"+ IssueNumber + ".jpg"; }
+        }
     }
 }
