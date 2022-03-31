@@ -7,11 +7,19 @@ namespace ComicBookGallery.Controllers
 {
     public class ComicBooksController : Controller
     {
-        private ComicBookRepository _comicBookRepository = null;
+        private ComicBookRepository _comicBooksRepository = null;
 
         public ComicBooksController()
         {
-            _comicBookRepository = new ComicBookRepository();
+            _comicBooksRepository = new ComicBookRepository();
+        }
+
+        public ActionResult Index()
+        {
+            var comicBooks = _comicBooksRepository.GetComicBooks();
+
+            return View(comicBooks);
+            
         }
 
         public ActionResult Detail(int? id)
@@ -20,7 +28,7 @@ namespace ComicBookGallery.Controllers
             {
                // return HttpNotFound();
             }
-            var comicBook = _comicBookRepository.GetComicBook((int)id);
+            var comicBook = _comicBooksRepository.GetComicBook((int)id);
             
             return View(comicBook);
         }

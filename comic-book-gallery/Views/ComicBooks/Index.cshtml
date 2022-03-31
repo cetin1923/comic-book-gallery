@@ -1,8 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model comic_book_gallery.Models.ComicBook[]
+
+@{
+    ViewBag.Title = "Comic Books";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h2>@ViewBag.Title</h2>
+
+<div class="row">
+    @foreach (var comicBook in Model)
+    {
+    <div class="col-md-3">
+        <h4>@comicBook.DisplayText</h4>
+        <img src="/Images/@comicBook.CoverImageFileName"
+             alt="@comicBook.DisplayText"
+             class="img-responsive" />
+    </div>
+    }
 </div>
